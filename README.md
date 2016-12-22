@@ -1,5 +1,7 @@
 # TakeClothes
-Zabns TakeClothes script updated for 1.0.6
+Zabns TakeClothes script updated for 1.0.6 by salival
+(original install url: http://opendayz.net/threads/release-zabns-take-clothes-2-0.19290/)
+(original discussion url: http://opendayz.net/threads/help-discussion-zabns-take-clothes.13198/)
 
 Installation Steps -
 
@@ -19,23 +21,25 @@ init.sqf:
 Code:
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 progressLoadingScreen 1.0;
-4) find this code:
+
+4) find these lines in fn_selfActions.sqf:
 
 	player removeAction s_player_manageDoor;
 	s_player_manageDoor = -1;
 
-add these lines after it:
+Add these lines after it:
 
     // Take Clothes by Zabn
         player removeAction s_player_clothes;
       s_player_clothes = -1;
 
-5) Find these lines in fn_selfActions:
+5) find these lines in fn_selfActions.sqf:
 
 	} else {
 		player removeAction s_player_fillgen;
 		s_player_fillgen = -1;
 	};
+	
 Add these lines after:
 
 	_clothesTaken = _cursorTarget getVariable["clothesTaken",false];
@@ -44,7 +48,7 @@ Add these lines after:
 	// Take clothes by Zabn
 	if (_isMan and !_isAlive and !_isZombie and !_clothesTaken) then {
 		if (s_player_clothes < 0) then {
-			s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "scripts\player_takeClothes_v2.sqf",_cursorTarget, -10, false, true];
+			s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "scripts\takeClothes.sqf",_cursorTarget, -10, false, true];
 		};
 	} else {
 		player removeAction s_player_clothes;
@@ -53,7 +57,7 @@ Add these lines after:
 6) If you don't have a custom variables.sqf you need to make one. You can get it from the dayz_code\init folder by extracting it just like you did the fn_selfActions.sqf file.
 If you already have a variables.sqf or you have copied over the default epoch one:
 
-Find this line:
+Find this line in variables.sqf:
 	s_player_manageDoor = -1;
 	
 Add this after it:
@@ -78,4 +82,4 @@ case "Bandit1_DZ": {
 };
 9) You're done! enjoy the new script! :)
 
-Credits - Zabn
+Credits - Zabn, salival
