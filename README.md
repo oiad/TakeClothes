@@ -60,7 +60,7 @@ Add these lines after:
 	// Take clothes by Zabn
 	if (_isMan and !_isAlive and !_isZombie and !_clothesTaken) then {
 		if (s_player_clothes < 0) then {
-			s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "scripts\takeClothes.sqf",_cursorTarget, -10, false, true];
+			s_player_clothes = player addAction [format["<t color='#0096ff'>Take Clothes</t>"], "scripts\takeclothes.sqf",_cursorTarget, 0, false, true];
 		};
 	} else {
 		player removeAction s_player_clothes;
