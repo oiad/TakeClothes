@@ -65,6 +65,7 @@ Add these lines after:
 	} else {
 		player removeAction s_player_clothes;
 		s_player_clothes = -1;
+	};
 		
 8) Battleye filters: open your setvariable.txt and at line 1 add to the end of the line this:
 
