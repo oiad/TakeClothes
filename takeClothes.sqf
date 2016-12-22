@@ -3,7 +3,7 @@
 
 private ["_animState","_body","_clothesTaken","_finished","_isMedic","_itemNew","_itemNewName","_okSkin","_onLadder","_result","_skin","_started","_takeClothesUsageTime"];
 
-if (dayz_actionInProgress) exitWith {}; 
+if (dayz_actionInProgress) exitWith {};
 dayz_actionInProgress = true;
 
 _body = _this select 3;
@@ -20,10 +20,10 @@ _skin = (typeOf _body);
 _itemNew = _skin;
 
 switch (_itemNew) do {
-case "Survivor3_DZ": {
+	case "Survivor3_DZ": {
 		_itemNew = "Survivor2_DZ";
 	};
-case "Bandit1_DZ": {
+	case "Bandit1_DZ": {
 		_itemNew = "Survivor2_DZ";
 	};
 };

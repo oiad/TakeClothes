@@ -67,21 +67,22 @@ Add this after it:
 
 7) Battleye filters: open your setvariable.txt and at line 1 add to the end of the line this:
 
-Code:
 !="clothesTaken"
+
 8) OPTIONAL: to remove certain skins from being removable, add this:
-Code:
+
 case "<SKIN CLASSNAME>": {
     _itemNew = "disabled";
 };
+
 (obviously replace the <SKIN CLASSNAME> with the classname of the skin)
 
 under this
 
-Code:
 case "Bandit1_DZ": {
     _itemNew = "Survivor2_DZ";
 };
+
 9) You're done! enjoy the new script! :)
 
 Credits - Zabn, salival
