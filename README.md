@@ -72,11 +72,11 @@ Add these lines after:
 
 9) OPTIONAL: to remove certain skins from being removable, add this:
 
-	case "<SKIN CLASSNAME>": {
+	case "EXAMPLE_SKIN": {
 		_itemNew = "disabled";
 	};
 
-(obviously replace the <SKIN CLASSNAME> with the classname of the skin)
+(obviously replace the EXAMPLE_SKIN with the classname of the skin)
 
 under this:
 
