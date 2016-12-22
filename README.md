@@ -1,6 +1,8 @@
 # TakeClothes
 Zabns TakeClothes script updated for 1.0.6 by salival
+
 (original install url: http://opendayz.net/threads/release-zabns-take-clothes-2-0.19290/)
+
 (original discussion url: http://opendayz.net/threads/help-discussion-zabns-take-clothes.13198/)
 
 Installation Steps -
