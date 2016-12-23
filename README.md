@@ -34,8 +34,12 @@ Add this after it:
 
 	s_player_clothes = -1; // Zabns take clothes
 	
-6) Find these lines in fn_selfActions.sqf:
+6) Find these lines in fn_selfActions.sqf (around line 1160):
 
+	player removeAction s_player_fuelauto;
+	s_player_fuelauto = -1;
+	player removeAction s_player_fuelauto2;
+	s_player_fuelauto2 = -1;
 	player removeAction s_player_manageDoor;
 	s_player_manageDoor = -1;
 
@@ -45,14 +49,14 @@ Add these lines after it:
 	player removeAction s_player_clothes;
 	s_player_clothes = -1;
 
-7) Find these lines in fn_selfActions.sqf:
+7) Find these lines in fn_selfActions.sqf (around line 926):
 
 	} else {
 		player removeAction s_player_fillgen;
 		s_player_fillgen = -1;
 	};
 	
-Add these lines after:
+Add these lines after it:
 
 	_clothesTaken = _cursorTarget getVariable["clothesTaken",false];
 	_isZombie = _cursorTarget isKindOf "zZombie_base"; // Add this here now since epoch 1.0.6 doesn't initialize this where this will go.
