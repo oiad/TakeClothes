@@ -1,16 +1,12 @@
 // Originally by Zabn 2014
 // Modified for DayZ Epoch 1.0.6 by salival
 
-private ["_animState","_body","_clothesTaken","_finished","_isMedic","_itemNew","_itemNewName","_okSkin","_onLadder","_result","_skin","_started","_takeClothesUsageTime"];
+private ["_animState","_body","_clothesTaken","_finished","_isMedic","_itemNew","_itemNewName","_okSkin","_result","_skin","_started","_takeClothesUsageTime"];
 
 if (dayz_actionInProgress) exitWith {};
 dayz_actionInProgress = true;
 
 _body = _this select 3;
-_onLadder = (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
-if (_onLadder) exitWith { "You can't perform this action while on a ladder!" call dayz_rollingMessages; };
-
-if (vehicle player != player) exitWith { "You may not take clothes while in a vehicle" call dayz_rollingMessages; };
 
 player removeAction s_player_clothes;
 s_player_clothes = -1;
