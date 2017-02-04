@@ -1,15 +1,20 @@
 // Originally by Zabn 2014
 // Modified for DayZ Epoch 1.0.6 by salival
 
-private ["_animState","_body","_clothesTaken","_finished","_isMedic","_itemNew","_itemNewName","_okSkin","_result","_skin","_started","_takeClothesUsageTime"];
+private ["_animState","_body","_clothesTaken","_finished","_isMedic","_itemNew","_itemNewName","_okSkin","_playerNear","_result","_skin","_started","_takeClothesUsageTime"];
 
-if (dayz_actionInProgress) exitWith {};
+if (dayz_actionInProgress) exitWith {"You are already performing an action, wait for the current action to finish." call dayz_rollingMessages;};
 dayz_actionInProgress = true;
 
 _body = _this select 3;
 
 player removeAction s_player_clothes;
 s_player_clothes = -1;
+
+if (isNull _body) exitWith {dayz_actionInProgress = false; systemChat "cursorTarget isNull!";};
+
+_playerNear = {isPlayer _x} count (([_body] call FNC_GetPos) nearEntities ["CAManBase", 10]) > 1;
+if (_playerNear) exitWith {dayz_actionInProgress = false; localize "str_pickup_limit_5" call dayz_rollingMessages;};
 
 _skin = (typeOf _body);
 
