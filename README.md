@@ -1,5 +1,7 @@
 # TakeClothes
-Zabns TakeClothes script updated for 1.0.6 by salival
+Zabns TakeClothes script updated for 1.0.6.1 by salival
+
+	Discussion thread: https://epochmod.com/forum/topic/43076-zabns-take-clothes-updated-for-epoch-106/
 
 	(original install url: http://opendayz.net/threads/release-zabns-take-clothes-2-0.19290/)
 	(original discussion url: http://opendayz.net/threads/help-discussion-zabns-take-clothes.13198/)
@@ -71,11 +73,7 @@ Add these lines after it:
 		s_player_clothes = -1;
 	};
 		
-8) Battleye filters: open your setvariable.txt and at line 1 add to the end of the line this:
-
-	!="clothesTaken"
-
-9) OPTIONAL: to remove certain skins from being removable, add this:
+8) OPTIONAL: to remove certain skins from being removable, add this:
 
 	case "EXAMPLE_SKIN": {
 		_itemNew = "disabled";
@@ -89,6 +87,6 @@ under this:
 		_itemNew = "Survivor2_DZ";
 	};
 
-10) You're done! enjoy the new script! :)
+9) You're done! enjoy the new script! :)
 
 Credits - Zabn, salival
