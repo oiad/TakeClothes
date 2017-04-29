@@ -6,7 +6,17 @@ Zabns TakeClothes script updated for 1.0.6.1 by salival
 	(original install url: http://opendayz.net/threads/release-zabns-take-clothes-2-0.19290/)
 	(original discussion url: http://opendayz.net/threads/help-discussion-zabns-take-clothes.13198/)
 
-Installation Steps -
+# REPORTING ERRORS/PROBLEMS
+
+1. Please, if you report issues can you please attach (on pastebin or similar) your CLIENT rpt log file as this helps find out the errors very quickly. To find this logfile:
+
+	```sqf
+	C:\users\<YOUR WINDOWS USERNAME>\AppData\Local\Arma 2 OA\ArmA2OA.RPT
+	```
+
+**[>> Download <<](https://github.com/oiad/TakeClothes/archive/master.zip)**
+	
+# Installation Steps:
 
 1) In your \dayzinstallfolder\MPMissions\dayz_1.Chernarus folder, create a subfolder called "scripts" or use another name if a folder with other add-on scripts exists.
 
