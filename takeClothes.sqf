@@ -1,5 +1,5 @@
 // Originally by Zabn 2014
-// Modified for DayZ Epoch 1.0.6 by salival
+// Modified for DayZ Epoch 1.0.6 by salival - https://github.com/oiad/
 
 private ["_animState","_body","_clothesTaken","_finished","_isMedic","_itemNew","_itemNewName","_okSkin","_playerNear","_result","_skin","_started","_takeClothesUsageTime"];
 
