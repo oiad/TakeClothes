@@ -124,7 +124,7 @@ Otherwise merge the code from the downloaded file.
 
 (obviously replace the EXAMPLE_SKIN with the classname of the skin)
 
-under this:
+	under this:
 
 	```sqf
 	case "Bandit1_DZ": {
@@ -158,6 +158,6 @@ under this:
 	call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 	```
 
-12) You're done! enjoy the new script! :)
+11) You're done! enjoy the new script! :)
 
 Credits - Zabn, salival
