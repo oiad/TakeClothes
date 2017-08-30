@@ -127,9 +127,11 @@ Otherwise merge the code from the downloaded file.
 under this:
 	
 	```sqf
+	
 	case "Bandit1_DZ": {
 		_itemNew = "Survivor2_DZ";
 	};
+	
 	```
 	
 # init.sqf:
