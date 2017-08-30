@@ -122,9 +122,9 @@ Otherwise merge the code from the downloaded file.
 	};
 	```
 
-(obviously replace the EXAMPLE_SKIN with the classname of the skin)
+   (obviously replace the EXAMPLE_SKIN with the classname of the skin)
 
-directly below:
+   directly below:
 
 	```sqf
 	case "Bandit1_DZ": {
