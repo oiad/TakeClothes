@@ -114,6 +114,24 @@ Otherwise merge the code from the downloaded file.
 	};
 	```
 
+8) OPTIONAL: to remove certain skins from being removable, add this:
+
+	```sqf
+	case "EXAMPLE_SKIN": {
+		_itemNew = "disabled";
+	};
+	```
+
+(obviously replace the EXAMPLE_SKIN with the classname of the skin)
+
+under this:
+
+	```sqf
+	case "Bandit1_DZ": {
+		_itemNew = "Survivor2_DZ";
+	};
+	```
+
 # init.sqf:
 
 9)  Find this line
@@ -156,6 +174,6 @@ under this:
 	};
 	```
 
-9) You're done! enjoy the new script! :)
+12) You're done! enjoy the new script! :)
 
 Credits - Zabn, salival
