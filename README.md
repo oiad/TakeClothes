@@ -124,13 +124,10 @@ Otherwise merge the code from the downloaded file.
 
 (obviously replace the EXAMPLE_SKIN with the classname of the skin)
 
-	under this:
-
-	```sqf
+under this:
 	case "Bandit1_DZ": {
 		_itemNew = "Survivor2_DZ";
 	};
-	```
 	
 # init.sqf:
 
