@@ -125,16 +125,17 @@ Otherwise merge the code from the downloaded file.
 (obviously replace the EXAMPLE_SKIN with the classname of the skin)
 
 under this:
-
+	
 	```sqf
 	case "Bandit1_DZ": {
 		_itemNew = "Survivor2_DZ";
 	};
 	```
-
+	
 # init.sqf:
 
 9)  Find this line
+	
 	```sqf
 	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 	```
@@ -146,6 +147,7 @@ under this:
 	```
 	
 10) Find this line
+	
 	```sqf
 	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 	```
@@ -154,24 +156,6 @@ under this:
 
 	```sqf
 	call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
-	```
-		
-11) OPTIONAL: to remove certain skins from being removable, add this:
-
-	```sqf
-	case "EXAMPLE_SKIN": {
-		_itemNew = "disabled";
-	};
-	```
-
-(obviously replace the EXAMPLE_SKIN with the classname of the skin)
-
-under this:
-
-	```sqf
-	case "Bandit1_DZ": {
-		_itemNew = "Survivor2_DZ";
-	};
 	```
 
 12) You're done! enjoy the new script! :)
