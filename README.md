@@ -100,11 +100,8 @@ Otherwise merge the code from the downloaded file.
 	and add directly below:
 
 	```sqf
-	_clothesTaken = _cursorTarget getVariable["clothesTaken",false];
-	_isZombie = _cursorTarget isKindOf "zZombie_base"; // Add this here now since epoch 1.0.6 doesn't initialize this where this will go.
-
 	// Take clothes by Zabn
-	if (_isMan and !_isAlive and !_isZombie and !_clothesTaken) then {
+	if (_isMan and !_isAlive and !(_cursorTarget isKindOf "zZombie_base") and !(_cursorTarget getVariable["clothesTaken",false])) then {
 		if (s_player_clothes < 0) then {
 			s_player_clothes = player addAction [format["<t color='#0096ff'>Take Clothes</t>"], "scripts\takeClothes.sqf",_cursorTarget,0, false,true];
 		};
