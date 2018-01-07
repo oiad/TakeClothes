@@ -902,16 +902,6 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 		player removeAction s_player_fillgen;
 		s_player_fillgen = -1;
 	};
-	
-	// Take clothes by Zabn
-		if (_isMan && !_isAlive && !(_cursorTarget isKindOf "zZombie_base") && !(_cursorTarget getVariable["clothesTaken",false])) then {
-			if (s_player_clothes < 0) then {
-				s_player_clothes = player addAction ["<t color='#0096ff'>Take Clothes</t>","scripts\takeClothes.sqf",_cursorTarget,0, false,true];
-				};
-		} else {
-		player removeAction s_player_clothes;
-			s_player_clothes = -1;
-		};
 
 	//Towing with tow truck
 	/*
@@ -928,6 +918,17 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 		s_player_towing = -1;
 	};
 	*/
+
+	// Custom stuff below
+
+	if (_isMan && {!_isAlive} && {!(_cursorTarget isKindOf "zZombie_base")} && {!(_cursorTarget getVariable["clothesTaken",false])}) then {
+		if (s_player_clothes < 0) then {
+				s_player_clothes = player addAction ["<t color='#0096ff'>Take Clothes</t>","scripts\takeClothes.sqf",_cursorTarget,0, false,true];
+			};
+	} else {
+		player removeAction s_player_clothes;
+		s_player_clothes = -1;
+	};
 
 	// All Traders
 	if (_isMan && {!(isPlayer _cursorTarget)} && {_typeOfCursorTarget in serverTraders} && {!_isPZombie}) then {
@@ -1143,7 +1144,8 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 	player removeAction s_player_manageDoor;
 	s_player_manageDoor = -1;
 
-	// Take Clothes by Zabn
+	// Custom stuff below
+
 	player removeAction s_player_clothes;
 	s_player_clothes = -1;
 };
