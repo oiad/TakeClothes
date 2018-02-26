@@ -367,10 +367,10 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 			s_player_boil = -1;
 		};
 	};
-
+	
 	if (_isAlive) then {
 		_restrict = _typeOfCursorTarget in DZE_restrictRemoval;
-	
+
 		//Allow player to remove objects with no ownership or access required
 		if (!_restrict && (_isDestructable || _typeOfCursorTarget in DZE_isWreck || _typeOfCursorTarget in DZE_isWreckBuilding || _typeOfCursorTarget in DZE_isRemovable)) then {
 			if (_hasToolbox && _hasCrowbar) then {
@@ -806,7 +806,7 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 
 	if (_isMan && {!_isAlive} && {!(_cursorTarget isKindOf "zZombie_base")} && {!(_cursorTarget getVariable["clothesTaken",false])}) then {
 		if (s_player_clothes < 0) then {
-				s_player_clothes = player addAction ["<t color='#0096ff'>Take Clothes</t>","scripts\takeClothes.sqf",_cursorTarget,0, false,true];
+				s_player_clothes = player addAction [format["<t color='#0059FF'>%1</t>",localize "STR_CL_TC_TAKE_CLOTHES"],"scripts\takeClothes.sqf",_cursorTarget,0, false,true];
 			};
 	} else {
 		player removeAction s_player_clothes;
