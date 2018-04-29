@@ -1,3 +1,9 @@
+if (isServer) then {
+	diag_log "Loading custom server compiles";
+};
+
 if (!isDedicated) then {
-	fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";		//Checks which actions for self
+	diag_log "Loading custom client compiles";
+
+	fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";
 };
