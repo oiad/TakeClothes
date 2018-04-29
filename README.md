@@ -42,7 +42,7 @@ Zabns TakeClothes script updated for 1.0.6.1 by salival
 	and add directly below:
 
 	```sqf
-	fnc_usec_selfactions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";
+	fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";
 	```
 
 Otherwise merge the code from the downloaded file.
