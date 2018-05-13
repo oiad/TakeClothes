@@ -100,11 +100,10 @@ Otherwise merge the code from the downloaded file.
 	and add directly below:
 
 	```sqf
-	// Take clothes by Zabn
-	if (_isMan && {!_isAlive} && {!(_cursorTarget isKindOf "zZombie_base")} && {!(_cursorTarget getVariable["clothesTaken",false])}) then {
+	if (_isMan && {!_isAlive} && {!(_cursorTarget isKindOf "Animal")} && {!(_cursorTarget isKindOf "zZombie_base")} && {!(_cursorTarget getVariable["clothesTaken",false])}) then {
 		if (s_player_clothes < 0) then {
-			s_player_clothes = player addAction ["<t color='#0096ff'>Take Clothes</t>", "scripts\takeClothes.sqf",_cursorTarget,0, false,true];
-		};
+				s_player_clothes = player addAction [format["<t color='#0059FF'>%1</t>",localize "STR_CL_TC_TAKE_CLOTHES"],"scripts\takeClothes.sqf",_cursorTarget,0, false,true];
+			};
 	} else {
 		player removeAction s_player_clothes;
 		s_player_clothes = -1;

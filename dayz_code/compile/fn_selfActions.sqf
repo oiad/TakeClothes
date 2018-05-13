@@ -804,7 +804,7 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 
 	// Custom stuff below
 
-	if (_isMan && {!_isAlive} && {!(_cursorTarget isKindOf "zZombie_base")} && {!(_cursorTarget getVariable["clothesTaken",false])}) then {
+	if (_isMan && {!_isAlive} && {!(_cursorTarget isKindOf "Animal")} && {!(_cursorTarget isKindOf "zZombie_base")} && {!(_cursorTarget getVariable["clothesTaken",false])}) then {
 		if (s_player_clothes < 0) then {
 				s_player_clothes = player addAction [format["<t color='#0059FF'>%1</t>",localize "STR_CL_TC_TAKE_CLOTHES"],"scripts\takeClothes.sqf",_cursorTarget,0, false,true];
 			};
