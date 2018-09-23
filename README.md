@@ -47,6 +47,10 @@ Zabns TakeClothes script updated for 1.0.6.1 by salival
 
 Otherwise merge the code from the downloaded file.
 
+5. Download the <code>stringTable.xml</code> file linked below from the [Community Localization GitHub](https://github.com/oiad/communityLocalizations) and copy it to your mission folder, it is a community based localization file and contains translations for major community mods including this one.
+
+**[>> Download stringTable.xml <<](https://github.com/oiad/communityLocalizations/blob/master/stringTable.xml)**
+
 # variables.sqf:
 
 5) If you already have an existing variables.sqf with a dayz_resetSelfActions section:
