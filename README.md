@@ -13,12 +13,23 @@ Zabns TakeClothes script updated for 1.0.7 by Airwaves Man
 	```sqf
 	C:\users\<YOUR WINDOWS USERNAME>\AppData\Local\Arma 2 OA\ArmA2OA.RPT
 	```
+	
+# Index:
+
+* [Mission folder install](https://github.com/oiad/TakeClothes#mission-folder-install)
+* [BattlEye filter install](https://github.com/oiad/TakeClothes#battleye-filter-install)
+* [Old Releases](https://github.com/oiad/TakeClothes#old-releases)
+
 
 **[>> Download <<](https://github.com/oiad/TakeClothes/archive/master.zip)**
 
 # Install:
 
 * This install basically assumes you have a custom variables.sqf, compiles.sqf and fn_selfActions.sqf.
+
+** If not, visit this repo and follow the steps there**
+https://github.com/AirwavesMan/custom-epoch-functions
+
 	
 # Mission folder install:
 
@@ -85,7 +96,7 @@ Zabns TakeClothes script updated for 1.0.7 by Airwaves Man
 	};
 	```
 	
-# Battleye Script.txt filter:
+# BattlEye filter install:
 
 1. In your config\<yourServerName>\Battleye\scripts.txt around line 53: <code>1 nearEntities</code> add this to the end of it:
 
@@ -101,7 +112,10 @@ Zabns TakeClothes script updated for 1.0.7 by Airwaves Man
 
 Credits - Zabn, salival, Airwaves Man
 
-**** *For Epoch 1.0.6.2 only* ****
+# Old Releases:	
+
+**** *Epoch 1.0.6.2* ****
 **[>> Download <<](https://github.com/oiad/TakeClothes/archive/refs/tags/Epoch_1.0.6.2.zip)**
 
-Visit this link: https://github.com/oiad/TakeClothes/tree/Epoch_1.0.6.2	
+
+
